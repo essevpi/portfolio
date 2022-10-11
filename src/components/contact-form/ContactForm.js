@@ -79,10 +79,10 @@ const ContactForm = () => {
           value='Send'
           disabled
         />
-      </form>
+      </form>{/*
       <p>Name: {formData.name}</p>
       <p>Email: {formData.email}</p>
-      <p>Message: {formData.message}</p>
+      <p>Message: {formData.message}</p> */}
     </div>
   );
 };

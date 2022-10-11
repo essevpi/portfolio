@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .section__container {
-  background-image: url('/images/space_background-contact.svg');
+  background-image: url('../../../public/images/space_background-contact.svg');
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -16,7 +16,7 @@
   }
 
   .section__contact-container {
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(3px);
