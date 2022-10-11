@@ -1,3 +1,5 @@
+@import './variables.scss'; 
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,9 +9,100 @@
 html,
 body {
   font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: $section-background-color;
+}
+
+h1 {
+  font-size: clamp($h1-min-size, $h1-val-size, $h1-max-size);
+}
+
+h2 {
+  font-size: clamp($h2-min-size, $h2-val-size, $h2-max-size);
+}
+
+p, label {
+  font-size: clamp($p-min-size, $p-val-size, $p-max-size);
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+//Fix autofill color change
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px $section-background-color inset !important;
+    -webkit-box-shadow: 0 0 0 30px $section-background-color inset !important;
+    -webkit-text-fill-color: $primary-text-color !important;
+    border-color: yellow;
+}
+
+//Utils classes
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__fullscreen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app__section {
+  width: $desktop-section-width;
+
+  @media screen and (max-width: $desktop-breakpoint) {
+    width: $medium-section-width;
+  }
+
+  @media screen and (max-width: $medium-breakpoint) {
+    width: $mobile-section-width;
+  }
+}
+
+//Font sizing with breakpoints - keep as backup
+/* h1 {
+  font-size: $h1-desktop-size;
+  font-weight: bold;
+
+  @media screen and (max-width: $desktop-breakpoint) {
+    font-size: $h1-medium-size;
+  }
+
+  @media screen and (max-width: $medium-breakpoint) {
+    font-size: $h1-mobile-size;
+  }
+}
+
+h2 {
+  font-size: $h2-desktop-size;
+  font-weight: bold;
+
+  @media screen and (max-width: $desktop-breakpoint) {
+    font-size: $h2-medium-size;
+  }
+
+  @media screen and (max-width: $medium-breakpoint) {
+    font-size: $h2-mobile-size;
+  }
+}
+
+p {
+  font-size: $p-desktop-size;
+  line-height: 1.5rem;
+  font-weight: 300;
+
+  @media screen and (max-width: $desktop-breakpoint) {
+    font-size: $p-medium-size;
+  }
+
+  @media screen and (max-width: $medium-breakpoint) {
+    font-size: $p-mobile-size;
+  }
+} */

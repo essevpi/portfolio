@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.section__container {
+  background-image: url('/images/space_background-hero.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+
+  /*.hero__container {
+    width: 75%;
+    height: 65%;
+  }*/
+
+  .section__divider-top {
+    position: absolute;
+    top: 0;
+    height: 175px;
+    width: 100%;
+    margin-top: -1px; //fix shape-section line
+  }
+
+  .section__divider-bottom {
+    position: absolute;
+    bottom: 0;
+    height: 175px;
+    width: 100%;
+    margin-bottom: -1px; //fix shape-section line
+  }
+}

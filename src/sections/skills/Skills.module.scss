@@ -1,0 +1,94 @@
+@import '../../styles/variables.scss';
+
+.section__container {
+  background: $section-background-color; /* #3b3b3b */
+  color: #fff;
+
+  /*.main__page {
+    width: 70%;
+
+    @media screen and (max-width: 576px) {
+      width: 85%;
+      padding: 4rem 0; //give padding to section to avoid navbar overlap with content
+    }
+  }*/
+
+  .skills__container-header {
+    margin: 2rem 0;
+    padding: 0.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.33);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+  }
+
+  .skills__container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .skills__container-item {
+      flex: 0 0 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+
+      span {
+        margin-top: 0.75rem;
+
+        &:hover {
+          animation: color-change 1s infinite;
+
+          @keyframes color-change {
+            0% {
+              color: white;
+            }
+            50% {
+              color: $primary-color;
+            }
+            100% {
+              color: white;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        flex: 0 0 50%;
+      }
+
+      @media screen and (min-width: 1536px) {
+        flex: 0 0 12.5%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      /* flex-direction: column; */
+    }
+  }
+}
+
+/* .card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #e2e2e2;
+  color: #000;
+
+  /* box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card__item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+
+  p {
+    margin-left: 0.75rem;
+  }
+} */

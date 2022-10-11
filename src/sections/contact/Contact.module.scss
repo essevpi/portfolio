@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.section__container {
+  background-image: url('/images/space_background-projects.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+
+  .section__divider-top {
+    position: absolute;
+    top: 0;
+    height: 175px;
+    width: 100%;
+    margin-top: -1px; //fix shape-section line
+  }
+
+  .section__contact-container {
+    padding: 3rem;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+  }
+}
