@@ -5,8 +5,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  basePath: '/portfolio',
-  assetPrefix: '/portfolio'
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
 };
 
 module.exports = nextConfig;
