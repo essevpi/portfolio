@@ -6,8 +6,8 @@
   margin: 0;
 }
 
-html {
-  //height: -webkit-fill-available;
+:root {
+  
 }
 
 body {
@@ -15,8 +15,6 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background: $section-background-color;
-  /* min-height: 100vh;
-  min-height: -webkit-fill-available; */
 }
 
 h1 {
@@ -57,7 +55,7 @@ input:-webkit-autofill:active {
 .app__fullscreen {
   width: 100%;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .app__section {
