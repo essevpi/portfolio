@@ -6,10 +6,6 @@
   margin: 0;
 }
 
-:root {
-  
-}
-
 body {
   font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
@@ -55,7 +51,7 @@ input:-webkit-autofill:active {
 .app__fullscreen {
   width: 100%;
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  //min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .app__section {

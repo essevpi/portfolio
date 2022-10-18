@@ -9,9 +9,7 @@ import Skills from '../sections/skills/Skills';
 import styles from './App.module.scss';
 
 export default function Home() {
-  //const [vh, setVh] = useState(typeof window !== 'undefined' && window.innerHeight);
-
-  useEffect(() => {
+  /* useEffect(() => {
     const updateVh = () => {
       let vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -20,7 +18,7 @@ export default function Home() {
     window.addEventListener('resize', updateVh);
 
     return () => window.removeEventListener('resize', updateVh);
-  }, []);
+  }, []); */
 
   return (
     <div className={styles.app}>
