@@ -12,6 +12,10 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background: $section-background-color;
+  min-height: 100vh;
+  min-height: -moz-fill-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
 }
 
 h1 {
