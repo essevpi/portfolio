@@ -31,7 +31,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={styles['contact-form__container']}>
+    <div>{/* <div className={styles['contact-form__container']}> */}
       <form
         className={styles['contact-form__form']}
         onSubmit={formHandler}

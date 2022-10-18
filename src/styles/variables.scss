@@ -7,19 +7,6 @@ $hover-transition: all 0.3s ease;
 $primary-text-color: rgba(235, 235, 235, 1);
 $primary-text-hover-color: rgba(235, 235, 235, 0.85);
 
-//Font sizes
-$h1-desktop-size: 2rem;
-$h1-medium-size: 1.8rem;
-$h1-mobile-size: 1.5rem;
-
-$h2-desktop-size: 1.8rem;
-$h2-medium-size: 1.5rem;
-$h2-mobile-size: 1.3rem;
-
-$p-desktop-size: 1.5rem;
-$p-medium-size: 1.3rem;
-$p-mobile-size: 1rem;
-
 //Responsive font size with clamp func (test)
 $h1-min-size: 2rem;
 $h1-max-size: 2.5rem;
@@ -41,6 +28,8 @@ $xl-desktop-breakpoint: 1200px;
 $desktop-breakpoint: 992px;
 $medium-breakpoint: 768px;
 $mobile-breakpoint: 576px;
+$xs-mobile-breakpoint: 320px;
+
 
 //Sections widths
 $desktop-section-width: 70%;

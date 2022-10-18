@@ -12,8 +12,15 @@ export default function Home() {
     <div className={styles.app}>
       <Head>
         <title>essevpi</title>
-        <meta name='description' content='essevpi homepage' />
-        <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content='Homepage' />
+        <link
+          rel='icon'
+          href={`${
+            process.env.NODE_ENV === 'production'
+              ? `${process.env.NEXT_PUBLIC_FAVICON}/favicon.ico`
+              : '/favicon.ico'
+          }`}
+        />
       </Head>
 
       <Navbar />
