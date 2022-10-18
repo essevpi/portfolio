@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Footer from '../components/footer/Footer';
 import Navbar from '../components/navbar/Navbar';
@@ -8,6 +9,18 @@ import Skills from '../sections/skills/Skills';
 import styles from './App.module.scss';
 
 export default function Home() {
+  /* const [vh, setVh] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const updateVh = () => {
+      setVh(window.innerHeight * 0.01);
+    };
+
+    window.addEventListener('resize', updateVh);
+
+    return () => window.removeEventListener('resize', updateVh);
+  }, []); */
+
   return (
     <div className={styles.app}>
       <Head>
