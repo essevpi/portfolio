@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Skills.module.scss';
 import { motion } from 'framer-motion';
-import SkillList from '../../components/cardlist/SkillList';
+import SkillList from '../../components/skill-list/SkillList';
 import { knownSkills, plannedSkills } from './skills_data';
 
 const Skills = () => {
@@ -34,6 +34,7 @@ const Skills = () => {
       id='skills'
     >
       <div className='app__section'/* {styles.main__page} */>
+        {/* KNOWN SKILLS */}
         <motion.div
           className={styles['skills__container']}
           variants={magicVariants}
@@ -48,6 +49,7 @@ const Skills = () => {
             iconSize={48}
           />
         </motion.div>
+        {/* PLANNED SKILLS */}
         <motion.div
           className={styles['skills__container']}
           variants={magicVariants}

@@ -6,8 +6,11 @@
   margin: 0;
 }
 
-body {
-  font-family: 'Lato', sans-serif;
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: $primary-text-color;
+  line-height: $line-height;
   scroll-behavior: smooth;
   overflow-x: hidden;
   background: $section-background-color;
@@ -15,14 +18,17 @@ body {
 
 h1 {
   font-size: clamp($h1-min-size, $h1-val-size, $h1-max-size);
+  line-height: 1.2;
 }
 
 h2 {
   font-size: clamp($h2-min-size, $h2-val-size, $h2-max-size);
+  line-height: 1.2;
 }
 
-p, label {
+p, label, a {
   font-size: clamp($p-min-size, $p-val-size, $p-max-size);
+  //line-height: $p-line-height;
 }
 
 a {
@@ -51,7 +57,10 @@ input:-webkit-autofill:active {
 .app__fullscreen {
   width: 100%;
   min-height: 100vh;
-  //min-height: calc(var(--vh, 1vh) * 100);
+
+  /* @media screen and (max-height: $mobile-height) {
+    min-height: 150vh;
+  } */
 }
 
 .app__section {
@@ -65,44 +74,3 @@ input:-webkit-autofill:active {
     width: $mobile-section-width;
   }
 }
-
-//Font sizing with breakpoints - keep as backup
-/* h1 {
-  font-size: $h1-desktop-size;
-  font-weight: bold;
-
-  @media screen and (max-width: $desktop-breakpoint) {
-    font-size: $h1-medium-size;
-  }
-
-  @media screen and (max-width: $medium-breakpoint) {
-    font-size: $h1-mobile-size;
-  }
-}
-
-h2 {
-  font-size: $h2-desktop-size;
-  font-weight: bold;
-
-  @media screen and (max-width: $desktop-breakpoint) {
-    font-size: $h2-medium-size;
-  }
-
-  @media screen and (max-width: $medium-breakpoint) {
-    font-size: $h2-mobile-size;
-  }
-}
-
-p {
-  font-size: $p-desktop-size;
-  line-height: 1.5rem;
-  font-weight: 300;
-
-  @media screen and (max-width: $desktop-breakpoint) {
-    font-size: $p-medium-size;
-  }
-
-  @media screen and (max-width: $medium-breakpoint) {
-    font-size: $p-mobile-size;
-  }
-} */

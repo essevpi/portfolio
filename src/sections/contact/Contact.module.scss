@@ -4,7 +4,6 @@
   background-image: url('../../../public/images/space_background-contact.svg');
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
   position: relative;
 
   .section__divider-top {
@@ -18,8 +17,8 @@
   .section__contact-container {
     padding: 1rem;
     border-radius: 16px;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(3px);
+    background: $glass-background-color;
+    backdrop-filter: $glass-backdrop-filter;
 
     /* @media screen and (max-height: $medium-breakpoint) {
       height: 50vh;

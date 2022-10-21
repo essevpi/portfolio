@@ -4,13 +4,76 @@
   background-image: url('../../../public/images/space_background-hero.svg');
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
   position:relative;
+  height: max-content;
 
-  /*.hero__container {
-    width: 75%;
-    height: 65%;
-  }*/
+  .hero__container {
+    padding: 1rem 3rem;
+    border-radius: 16px;
+    background: $glass-background-color;
+    backdrop-filter: $glass-backdrop-filter;
+    z-index: 1;
+
+    //fix section not growing on landscape and/or small device
+    @media screen and (max-height: 667px) {
+      margin: 7.5rem 0;
+    }
+
+    @media screen and (max-width: $medium-breakpoint) {
+      padding: 1rem 2rem;
+    }
+
+    .hero__container-wrapper {
+      min-width: 0;
+    }
+
+    .hero__container-heading-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .hero__container-heading-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: white;
+        //align-self: center;
+        @media screen and (max-width: $desktop-breakpoint) {
+          margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: $mobile-breakpoint),
+        (max-height: 768px) {
+          display: none;
+        }
+      }
+
+      .hero__container-heading-title {
+        & > h1 {
+          white-space: nowrap;
+
+          @media screen and (max-width: $medium-breakpoint) {
+            white-space: normal;
+          }
+        }
+      }
+
+      @media screen and (max-width: $desktop-breakpoint) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+    }
+
+/* @media screen and (max-width: $medium-breakpoint),
+    (max-height: 776px) {
+      padding: 3rem;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint),
+    (max-height: 776px) {
+      padding: 1rem;
+    } */
+  }
 
   .section__divider-top {
     position: absolute;

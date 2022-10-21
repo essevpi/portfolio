@@ -23,7 +23,7 @@ const navItems = [
 const drawerVariants = {
   closed: { width: 0 },
   open: {
-    width: '55%',
+    width: '65%',
     transition: {
       duration: 0.3,
       ease: 'easeOut',
@@ -62,16 +62,19 @@ const Navbar = () => {
 
         </ul>
         <div className={styles['navbar__menu']}>
-          <IoMdMenu onClick={() => setIsOpen(true)} />
+          <IoMdMenu onClick={() => setIsOpen(prev => !prev)} />
           <AnimatePresence>
             {isOpen && (
               <motion.div
+                className={styles['navbar__menu-drawer']}
                 variants={drawerVariants}
                 initial="closed"
                 animate="open"
                 exit="close"
               >
-                <IoMdClose onClick={() => setIsOpen(false)} />
+                <div className={styles['navbar__close-btn-wrapper']}>
+                  <IoMdClose onClick={() => setIsOpen(prev => !prev)} />
+                </div>
                 <ul className={styles['navbar__links']}>
                   {navItems.map((item) => (
                     <li key={`link-${item.path}`}>

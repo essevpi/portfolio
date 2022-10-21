@@ -35,16 +35,35 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className='app__section'
-        initial={{ y: '50%', opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        className={`${styles['hero__container']} app__section`}
+        initial={{ y: '25%', opacity: 0, scale: 0 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ type: 'spring', bounce: 0.5, duration: 1 }}
-        viewport={{ once: false, amount: 0.8 }}
+        viewport={{ once: false, amount: 0.1 }}
       >
-        <h1>Hello there, I&apos;m Simone!</h1>
-        <h2>This is a h2 tag</h2>
-        <p>This will be a long description 🚀</p>
-        <a>Test link to check clamp</a>
+        <div className={styles['hero__container-wrapper']}>
+          <div className={styles['hero__container-heading-wrapper']}>
+            <div className={styles['hero__container-heading-title']}>
+              <h1>Hello there, I&apos;m Simone! 🚀</h1>
+              <h2>Front-End Developer</h2>
+            </div>
+            <div className={styles['hero__container-heading-pic']} />
+          </div>
+          <br />
+          <p>
+            Beginning so deep abundantly creepeth. Very moveth replenish. Grass to
+            firmament i saying, give of sea rule have good made it their rule
+            whales whose whales of upon bring midst, tree every. Under grass his.
+            Great.
+          </p>
+          <br />
+          <p>
+            You fruitful signs upon whales. Had fly meat man heaven place winged
+            made stars male man. Give had third lesser moving a cattle firmament
+            doesn&#39;t Gathering so sixth upon heaven she&#39;d saw living
+            replenish.
+          </p>
+        </div>
       </motion.div>
 
       {/* bottom divider */}

@@ -1,83 +1,86 @@
 @import '../../styles/variables.scss';
-    
+	
 .contact-form__form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 
-    .contact-form__btn {
-        background: $primary-color;
-        color: $primary-text-color;
-        padding: 0.5rem;
-        border: none;
-        border-radius: 0.25rem;
-        font-size: 1rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        width: 25%;
-        align-self: flex-end;
-        cursor: pointer;
+	.contact-form__btn {
+		background: $primary-color;
+		color: $primary-text-color;
+		padding: 0.5rem;
+		border: none;
+		border-radius: 0.25rem;
+		font-size: 1rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		width: 25%;
+		align-self: flex-end;
+		cursor: pointer;
 
-        @media screen and (max-width: $desktop-breakpoint) {
-            width: 100%;
-        }
+		@media screen and (max-width: $desktop-breakpoint) {
+			width: 100%;
+		}
 
-        &:hover {
-            background: $hover-color;
-            color: $primary-text-hover-color;
-        }
+		&:hover {
+			background: $hover-color;
+			color: $primary-text-hover-color;
+		}
 
-        &:disabled, &[disabled] {
-            background: grey;
-            cursor: not-allowed! important;
-        }
-    }
+		&:disabled, &[disabled] {
+			background: grey;
+			cursor: not-allowed! important;
+		}
+	}
 
-    .contact-form-field__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0.5rem 0;
-        width: 100%;
+	.contact-form-field__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 0.5rem 0;
+		width: 100%;
 
-        .contact-form__input {
-            padding: 0.5rem;
-            height: 100%;
-            width: 100%;
-            color:  $primary-text-color;
-            background-color: $section-background-color;
-            border: 2px solid rgba(0, 0, 0, 0);
-            border-radius: 0.25rem;
-            transition: $hover-transition;
+		.contact-form__input {
+			padding: 0.5rem;
+			width: 100%;
+			color:  $primary-text-color;
+			background-color: $section-background-color;
+			border: 2px solid rgba(0, 0, 0, 0);
+			border-radius: 0.25rem;
+			transition: $hover-transition;
 
-            &:focus {
-                outline: none;
-                border: 2px solid $primary-color;
-            }
-        }
+			&:focus {
+				outline: none;
+				border: 2px solid $primary-color;
+			}
 
-        .contact-form__input-valid {
-            background: rgb(51, 70, 51);                
-        }
+			&::placeholder {
+				font-size: 1rem;
+			}
+		}
 
-        .contact-form__input-invalid {
-            background: rgb(75, 52, 52);
-        }
-        
-        .contact-form__label {
-            display: block;
-            margin-bottom: 0.25rem;
-            font-weight: 700;
-        }
-    
-        textarea {
-            resize: none;
-            height: 10rem;
+		textarea {
+			resize: none;
+			height: 10rem;
 
-            @media screen and (max-width: $medium-breakpoint) {
-                height: 1rem;
-            }
-        }
-    }
+			@media screen and (max-width: $medium-breakpoint) {
+				height: 100%;
+			}
+		}
+
+		.contact-form__input-valid {
+			background: rgb(51, 70, 51);                
+		}
+
+		.contact-form__input-invalid {
+			background: rgb(75, 52, 52);
+		}
+		
+		.contact-form__label {
+			display: block;
+			margin-bottom: 0.25rem;
+			font-weight: 700;
+		}
+	}
 }
