@@ -42,11 +42,11 @@ const drawerVariants = {
 const Navbar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
-      if (window.pageYOffset > lastScrollY && window.pageYOffset > 150) {
+      if (window.pageYOffset > lastScrollY && window.pageYOffset > 150 && isDrawerOpen === false) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
@@ -85,9 +85,9 @@ const Navbar = () => {
 
         </ul>
         <div className={styles['navbar__menu']}>
-          <IoMdMenu onClick={() => setIsOpen(prev => !prev)} />
+          <IoMdMenu onClick={() => setIsDrawerOpen(prev => !prev)} />
           <AnimatePresence>
-            {isOpen && (
+            {isDrawerOpen && (
               <motion.div
                 className={styles['navbar__menu-drawer']}
                 variants={drawerVariants}
@@ -96,13 +96,13 @@ const Navbar = () => {
                 exit="close"
               >
                 <div className={styles['navbar__close-btn-wrapper']}>
-                  <IoMdClose onClick={() => setIsOpen(prev => !prev)} />
+                  <IoMdClose onClick={() => setIsDrawerOpen(prev => !prev)} />
                 </div>
                 <ul className={styles['navbar__links']}>
                   {navItems.map((item) => (
                     <li key={`link-${item.path}`}>
                       <Link href={`#${item.path}`}>
-                        <a onClick={() => setIsOpen(false)}>{item.name}</a>
+                        <a onClick={() => setIsDrawerOpen(false) }>{item.name}</a>
                       </Link>
                     </li>
                   ))}
