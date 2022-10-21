@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
@@ -40,10 +40,33 @@ const drawerVariants = {
 };
 
 const Navbar = () => {
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.pageYOffset > lastScrollY && window.pageYOffset > 150) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
   return (
-    <nav className={styles['navbar__container']}>
+    <nav className={`${styles['navbar__container']} ${isHidden && styles['hidden']}`}>
       <div className={styles['navbar__wrapper']}>
         <Link href="/">
           <a className={styles['navbar__logo']}>essevPi</a>
