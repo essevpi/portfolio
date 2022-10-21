@@ -46,7 +46,7 @@ const Navbar = () => {
     <nav className={styles['navbar__container']}>
       <div className={styles['navbar__wrapper']}>
         <Link href="/">
-          <a className={styles['navbar__logo']}>essevpi</a>
+          <a className={styles['navbar__logo']}>essevPi</a>
         </Link>
         <ul className={styles['navbar__links']}>
           {navItems.map((item) => (

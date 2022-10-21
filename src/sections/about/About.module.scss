@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.section__container {
+  background: $section-background-color;
+  
+  .about__container {
+    display: flex;
+    flex-direction: column;
+
+    .about__heading-wrapper {
+      margin: 2rem 0;
+      padding: 0.5rem;
+      text-align: center;
+      border-top: $skills-header-border;
+      border-bottom: $skills-header-border;
+    }
+
+    .about__content-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+}

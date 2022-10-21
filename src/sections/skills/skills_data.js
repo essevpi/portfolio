@@ -7,7 +7,7 @@ export const knownSkills = {
   items: [
     {
       name: 'HTML 5',
-      iconPath: '../../../icons/html5.svg',
+      iconPath: '/icons/html5.svg',
       progress: 80,
     },
     {

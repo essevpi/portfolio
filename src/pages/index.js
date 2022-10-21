@@ -7,23 +7,13 @@ import Contact from '../sections/contact/Contact';
 import Skills from '../sections/skills/Skills';
 
 import styles from './App.module.scss';
+import About from '../sections/about/About';
 
-export default function Home() {
-  /* useEffect(() => {
-    const updateVh = () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-
-    window.addEventListener('resize', updateVh);
-
-    return () => window.removeEventListener('resize', updateVh);
-  }, []); */
-
+const Home = () => {
   return (
     <div className={styles.app}>
       <Head>
-        <title>essevpi</title>
+        <title>essevPi</title>
         <meta name='description' content='Homepage' />
         <link
           rel='icon'
@@ -37,9 +27,12 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+      <About />
       <Skills />
       <Contact />
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;

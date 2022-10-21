@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <div
       className={`${styles['section__container']} app__flex app__fullscreen`}
-      id='about'
+      id='hero'
     >
       {/* top divider */}
       <div className={styles['section__divider-top']}>
@@ -36,8 +36,8 @@ const Hero = () => {
 
       <motion.div
         className={`${styles['hero__container']} app__section`}
-        initial={{ y: '25%', opacity: 0, scale: 0 }}
-        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        initial={{ y: '25%', opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', bounce: 0.5, duration: 1 }}
         viewport={{ once: false, amount: 0.1 }}
       >
@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
             <div className={styles['hero__container-heading-pic']} />
           </div>
-          <br />
+          {/* <br />
           <p>
             Beginning so deep abundantly creepeth. Very moveth replenish. Grass to
             firmament i saying, give of sea rule have good made it their rule
@@ -62,7 +62,7 @@ const Hero = () => {
             made stars male man. Give had third lesser moving a cattle firmament
             doesn&#39;t Gathering so sixth upon heaven she&#39;d saw living
             replenish.
-          </p>
+          </p> */}
         </div>
       </motion.div>
 
