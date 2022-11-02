@@ -6,6 +6,11 @@
   background-repeat: no-repeat;
   position: relative;
 
+  //query for very small devices in landscape mode (fixes section height too small)
+  @media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: $mobile-height) {
+    min-height: 150vh;
+  }
+
   .section__divider-top {
     position: absolute;
     top: 0;
@@ -14,14 +19,85 @@
     margin-top: -1px; //fix shape-section line
   }
 
-  .section__contact-container {
+  .contact-container {
     padding: 1rem;
-    border-radius: 16px;
+    border-radius: 8px;
     background: $glass-background-color;
     backdrop-filter: $glass-backdrop-filter;
 
-    /* @media screen and (max-height: $medium-breakpoint) {
-      height: 50vh;
-    } */
+    .contact__heading-wrapper {
+      text-align: center;
+      border-bottom: $skills-header-border;
+    }
+
+    .contact__socials-wrapper {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;   
+      flex-wrap: wrap;
+      gap: 20px;
+      
+      @media screen and (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact__socials-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: $medium-breakpoint) {
+          flex: 0 0 40%;
+        }
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          flex: 0 0 50%;
+          flex-direction: row;
+        }
+
+        & > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $section-background-color;
+          border-radius: 50%;
+          padding: 0.75rem;
+          transition: $hover-transition;
+
+          &:hover {
+            background: $hover-color;
+          }
+        }
+
+        .contact__socials-heading {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 0.5rem;
+
+          @media screen and (max-width: $mobile-breakpoint) {
+            align-items: flex-start;
+            margin-left: 16px;
+            margin-top: 0;
+          }
+          
+          h3 {
+            color: $primary-color;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+
+          a:hover {
+            color: $primary-text-hover-color;
+            transition: $hover-transition;
+          }
+        }
+      }
+    }
   }
 }

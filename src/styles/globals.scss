@@ -8,7 +8,8 @@
 
 body, html {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;/* 
+  font-size: 16px;
+  /* 
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased; */
@@ -29,14 +30,22 @@ h2 {
   line-height: 1.2;
 }
 
-p, label, a {
+h3 {
+  font-size: clamp($h3-min-size, $h3-val-size, $h3-max-size);
+  line-height: 1.2;
+}
+
+p, label, a, button, .Typewriter {
   font-size: clamp($p-min-size, $p-val-size, $p-max-size);
-  //line-height: $p-line-height;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 //Fix autofill color change
@@ -47,7 +56,6 @@ input:-webkit-autofill:active {
     box-shadow: 0 0 0 30px $section-background-color inset !important;
     -webkit-box-shadow: 0 0 0 30px $section-background-color inset !important;
     -webkit-text-fill-color: $primary-text-color !important;
-    border-color: yellow;
 }
 
 //Utils classes
@@ -60,6 +68,11 @@ input:-webkit-autofill:active {
 .app__fullscreen {
   width: 100%;
   min-height: 100vh;
+
+  //query for landscape mode only
+  @media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: $mobile-height) {
+    min-height: calc(100vh + 4rem);
+  }
 
   /* @media screen and (max-height: $mobile-height) {
     min-height: 150vh;

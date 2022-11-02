@@ -32,18 +32,24 @@
     text-align: center;
   }
 
-  .footer__social-wrapper {
+  .footer__socials-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .footer__social-item {
+    .footer__socials-item {
       display: flex;
       margin: 0 0.5rem;
 
+      & > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       //set a final transition
       &:hover {
-        filter: grayscale(100%);
+        filter: invert(0.55);
         transition: $hover-transition;
       }
     }

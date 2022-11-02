@@ -33,10 +33,9 @@ const Skills = () => {
       className={`${styles['section__container']} app__flex app__fullscreen`}
       id='skills'
     >
-      <div className='app__section'/* {styles.main__page} */>
+      <div className='app__section'>
         {/* KNOWN SKILLS */}
         <motion.div
-          className={styles['skills__container']}
           variants={magicVariants}
           initial='offscreen'
           whileInView='onscreen'
@@ -51,7 +50,6 @@ const Skills = () => {
         </motion.div>
         {/* PLANNED SKILLS */}
         <motion.div
-          className={styles['skills__container']}
           variants={magicVariants}
           initial='offscreen'
           whileInView='onscreen'

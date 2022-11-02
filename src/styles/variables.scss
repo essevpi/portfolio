@@ -1,17 +1,21 @@
 /* Theme variables */
 // Main theme Colors
 $primary-color: rgba(140, 80, 255, 1); //#8c50ff
-$hover-color: rgba(126, 72, 226, 1);
+$hover-color: rgba(111, 61, 204, 1);
+$hover-border-color: rgb(101, 56, 185);
 $background-color: rgba(0, 0, 0, 0.2);
 $section-background-color: rgb(59, 59, 59);
 $skill-bar-background-color: rgb(105, 105, 105);
 $drawer-background-color: rgb(90, 90, 90);
-$glass-background-color: rgba(0, 0, 0, 0.45);
+$glass-background-color: rgba(0, 0, 0, 0.65);
 $navbar-divider-color: rgba(235, 235, 235, 0.55);
 $header-divider-color: rgba(235, 235, 235, 0.35);
 
 //Effects
 $glass-backdrop-filter: blur(4px);
+
+//Navbar height
+$navbar-height: 4rem;
 
 //Borders
 $navbar-divider-border: solid 1px $navbar-divider-color;
@@ -23,11 +27,12 @@ $skills-header-border: solid 1px $header-divider-color;
 $line-height: 1.6;
 $navbar-links-font-size: 16px;
 //Text colors
-$primary-text-color: rgba(235, 235, 235, 1);
-$primary-text-hover-color: rgba(235, 235, 235, 0.85);
+$primary-text-color: rgb(225, 225, 225, 1);
+$primary-text-hover-color: rgba(195, 195, 195, 1);
 
 /* Transitions */
 $hover-transition: all 0.3s ease;
+//$cursor-animation: blinker 1s linear infinite; 
 
 //Responsive font size with clamp func (test)
 $h1-min-size: 1.8rem;
@@ -38,8 +43,12 @@ $h2-min-size: 1.4rem;
 $h2-max-size: 1.6rem;
 $h2-val-size: 3.5vw;
 
+$h3-min-size: 1.2rem;
+$h3-max-size: 1.4rem;
+$h3-val-size: 2vw;
+
 $p-min-size: 1rem;
-$p-max-size: 1.2rem;
+$p-max-size: 1.1rem;
 $p-val-size: 2.5vw;
 
 /* Breakpoints */
@@ -49,9 +58,9 @@ $medium-breakpoint: 768px;
 $mobile-breakpoint: 576px;
 $xs-mobile-breakpoint: 320px;
 
-$mobile-height: 668px;
+$mobile-height: 425px;
 
 //Sections widths
 $desktop-section-width: 70%;
 $medium-section-width: 80%;
-$mobile-section-width: 85%;
+$mobile-section-width: 90%;

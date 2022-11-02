@@ -11,9 +11,9 @@
 
   .skills__container-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;    
   
     .skills__container-item {
       flex: 0 0 25%;

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.scss';
+import Socials from '../socials/Socials';
 
 const socials = [
   {
@@ -21,24 +22,13 @@ const Footer = () => {
     <div className={`${styles['footer__container']} app__flex`}>
       <footer className={`${styles['footer__wrapper']} app__section`}>
         <div className={styles['footer__heading']}>
-          Made with 💜 by me myself and I
+          <p>Made with 💜 by me myself and I</p>
         </div>
-        <div className={styles['footer__social-wrapper']}>
-          {socials.map((social, i) => (
-            <div className={styles['footer__social-item']} key={i}>
-              <Link href={social.url} passHref>
-                <a>
-                  <Image
-                    src={social.iconPath}
-                    alt={social.name}
-                    height={32}
-                    width={32}
-                  />
-                </a>
-              </Link>
-            </div>
-          ))}
-        </div>
+        <Socials
+          wrapperClassName={styles['footer__socials-wrapper']}
+          itemClassName={styles['footer__socials-item']}
+          iconSize={32}
+        />
       </footer>
     </div>
   );

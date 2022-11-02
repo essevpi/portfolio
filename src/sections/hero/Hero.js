@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import styles from './Hero.module.scss';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import TypewriterComponent from 'typewriter-effect';
+
+import styles from './Hero.module.scss';
+import Socials from '../../components/socials/Socials';
 
 const heroVariants = {
   offscreen: {
-    x: '50%',
+    y: '50%',
     opacity: 0,
   },
   onscreen: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       type: 'spring',
       bounce: 0.5,
-      duration: 1.2,
+      duration: 1
     },
   },
+};
+
+const typewriterOptions = {
+  strings: ['Front-End Developer', 'Technology enthusiast', 'Some other thing'],
+  autoStart: true,
+  loop: true,
+  wrapperClassName: `${styles.typewriter__wrapper}`,
+  cursorClassName: `${styles.typewriter__cursor}`
 };
 
 const Hero = () => {
@@ -36,33 +48,51 @@ const Hero = () => {
 
       <motion.div
         className={`${styles['hero__container']} app__section`}
-        initial={{ y: '25%', opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ type: 'spring', bounce: 0.5, duration: 1 }}
+        variants={heroVariants}
+        initial='offscreen'
+        whileInView='onscreen'
         viewport={{ once: false, amount: 0.1 }}
       >
         <div className={styles['hero__container-wrapper']}>
           <div className={styles['hero__container-heading-wrapper']}>
-            <div className={styles['hero__container-heading-title']}>
-              <h1>Hello there, I&apos;m Simone! 🚀</h1>
-              <h2>Front-End Developer</h2>
+            <h1 className={styles['hero__container-heading-title']}>
+              Hello there, I&apos;m{' '}
+              <span className={styles['hero__highlighted']}>Simone</span>{' '}
+              <span className={styles['wave__emoji']}>✋🏽</span>
+            </h1>
+            <TypewriterComponent options={typewriterOptions} />
+            <div className={styles['hero__actions-wrapper']}>
+              <Link href='#contact' passHref>
+                <button className={`${styles['hero__action-btn']} ${styles['hero__cta-btn']}`}>
+                  Contact
+                </button>
+              </Link>
+              <Link href='/' passHref>
+                <button className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}>
+                  Download CV
+                </button>
+              </Link>
             </div>
             <div className={styles['hero__container-heading-pic']} />
           </div>
-          {/* <br />
-          <p>
-            Beginning so deep abundantly creepeth. Very moveth replenish. Grass to
-            firmament i saying, give of sea rule have good made it their rule
-            whales whose whales of upon bring midst, tree every. Under grass his.
-            Great.
-          </p>
-          <br />
-          <p>
-            You fruitful signs upon whales. Had fly meat man heaven place winged
-            made stars male man. Give had third lesser moving a cattle firmament
-            doesn&#39;t Gathering so sixth upon heaven she&#39;d saw living
-            replenish.
-          </p> */}
+          <div className={styles['hero__container-info-wrapper']}>
+            <div className={styles['hero__position-wrapper']}>
+              <Image
+                src='/icons/map_pinpoint.svg'
+                alt='map-pinpoint'
+                width={16}
+                height={16}
+              />
+              <Link href='https://www.google.it/maps/place/20099+Sesto+San+Giovanni+MI/@45.5369608,9.2427489,14z/'>
+                45&deg;32&apos;25&quot;08 N, 09&deg;14&apos;34&quot;08 E
+              </Link>
+            </div>
+            <Socials
+              wrapperClassName={styles['hero__socials-wrapper']}
+              itemClassName={styles['hero__socials-item']}
+              iconSize={32}
+            />
+          </div>
         </div>
       </motion.div>
 

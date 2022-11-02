@@ -46,7 +46,7 @@ const Navbar = () => {
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
-      if (window.pageYOffset > lastScrollY && window.pageYOffset > 150 && isDrawerOpen === false) {
+      if (window.pageYOffset > lastScrollY && window.pageYOffset > 100 && isDrawerOpen === false) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
@@ -66,7 +66,7 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`${styles['navbar__container']} ${isHidden && styles['hidden']}`}>
+    <nav className={`${styles['navbar__container']} ${isHidden && styles['navbar__hidden']}`}>
       <div className={styles['navbar__wrapper']}>
         <Link href="/">
           <a className={styles['navbar__logo']}>essevPi</a>
@@ -77,13 +77,8 @@ const Navbar = () => {
               <Link href={`/#${item.path}`}>{item.name}</Link>
             </li>
           ))}
-          {/* <Link href="/CV.pdf" passHref>
-            <button className={styles["navbar__cta-button"]}>
-              Download
-            </button>
-          </Link> */}
-
         </ul>
+
         <div className={styles['navbar__menu']}>
           <IoMdMenu onClick={() => setIsDrawerOpen(prev => !prev)} />
           <AnimatePresence>
@@ -106,14 +101,6 @@ const Navbar = () => {
                       </Link>
                     </li>
                   ))}
-                  {/* <Link href="/">
-                    <a
-                      className={styles['navbar__cta-button']}
-                      style={{ margin: '1rem 0' }}
-                    >
-                      Contacts
-                    </a>
-                  </Link> */}
                 </ul>
               </motion.div>
             )}
