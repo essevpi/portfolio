@@ -38,6 +38,10 @@ p, label, a, button {
 
 .Typewriter {
   font-size: 1.25rem;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 1rem;
+  }
 }
 
 a {
