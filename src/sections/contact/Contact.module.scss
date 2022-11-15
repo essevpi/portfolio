@@ -8,7 +8,7 @@
 
   //query for very small devices in landscape mode (fixes section height too small)
   @media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: $mobile-height) {
-    min-height: 150vh;
+    min-height: 165vh;
   }
 
   .section__divider-top {

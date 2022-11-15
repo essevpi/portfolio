@@ -67,9 +67,10 @@ const Hero = () => {
                   Contact
                 </button>
               </Link>
-              <Link href='/' passHref>
+              <Link href='/files/CV_v1.pdf' download passHref>
+                {/* <a href='/files/CV_v1.pdf' download> */}
                 <button className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}>
-                  Download CV
+                  View CV
                 </button>
               </Link>
             </div>

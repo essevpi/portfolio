@@ -5,6 +5,7 @@ import { IoMdMenu, IoMdClose } from 'react-icons/io';
 
 import styles from './Navbar.module.scss';
 
+//navbar link names and paths
 const navItems = [
   {
     name: 'About',
@@ -20,6 +21,7 @@ const navItems = [
   },
 ];
 
+//Mobile drawer animation vairants
 const drawerVariants = {
   closed: { width: 0 },
   open: {
@@ -44,6 +46,7 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
+  //Handler for showing/hiding navbar on scroll
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
       if (window.pageYOffset > lastScrollY && window.pageYOffset > 100 && isDrawerOpen === false) {

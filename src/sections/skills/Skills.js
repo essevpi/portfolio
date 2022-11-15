@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Skills.module.scss';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import SkillList from '../../components/skill-list/SkillList';
 import { knownSkills, plannedSkills } from './skills_data';
 
@@ -11,21 +11,34 @@ const Skills = () => {
     window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
   }, []);
 
-  //Skills container animation
-  const magicVariants = {
+  //Known skills animation variants
+  const knownSkillsVariants = {
     offscreen: {
-      y: '50%',
+      x: '-100%',
       opacity: 0,
     },
     onscreen: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: 'easeOut',
         bounce: 0.5,
-        duration: 1.2,
+        duration: 0.75,
       },
     },
+  };
+
+  //Planned skills animation variants
+  const plannedSkillsVariants = {
+    ...knownSkillsVariants,
+    offscreen: {
+      ...knownSkillsVariants.offscreen,
+      x: '100%'
+    },
+    onscreen: {
+      x: 0,
+      ...knownSkillsVariants.onscreen
+    }
   };
 
   return (
@@ -36,10 +49,10 @@ const Skills = () => {
       <div className='app__section'>
         {/* KNOWN SKILLS */}
         <motion.div
-          variants={magicVariants}
+          variants={knownSkillsVariants}
           initial='offscreen'
           whileInView='onscreen'
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <SkillList
             cards={knownSkills.items}
@@ -50,10 +63,10 @@ const Skills = () => {
         </motion.div>
         {/* PLANNED SKILLS */}
         <motion.div
-          variants={magicVariants}
+          variants={plannedSkillsVariants}
           initial='offscreen'
           whileInView='onscreen'
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <SkillList
             cards={plannedSkills.items}
