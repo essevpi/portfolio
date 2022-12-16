@@ -18,7 +18,7 @@ const heroVariants = {
     transition: {
       type: 'spring',
       bounce: 0.5,
-      duration: 1
+      duration: 1,
     },
   },
 };
@@ -28,7 +28,7 @@ const typewriterOptions = {
   autoStart: true,
   loop: true,
   wrapperClassName: `${styles.typewriter__wrapper}`,
-  cursorClassName: `${styles.typewriter__cursor}`
+  cursorClassName: `${styles.typewriter__cursor}`,
 };
 
 const Hero = () => {
@@ -62,14 +62,18 @@ const Hero = () => {
             </h1>
             <TypewriterComponent options={typewriterOptions} />
             <div className={styles['hero__actions-wrapper']}>
-              <Link href='#contact' passHref>
-                <button className={`${styles['hero__action-btn']} ${styles['hero__cta-btn']}`}>
+              <Link href='#contact' passHref legacyBehavior>
+                <button
+                  className={`${styles['hero__action-btn']} ${styles['hero__cta-btn']}`}
+                >
                   Contact
                 </button>
               </Link>
-              <Link href='/files/CV_v1.pdf' download passHref>
+              <Link href='/files/CV_v1.pdf' passHref legacyBehavior>
                 {/* <a href='/files/CV_v1.pdf' download> */}
-                <button className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}>
+                <button
+                  className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}
+                >
                   View CV
                 </button>
               </Link>
@@ -84,7 +88,7 @@ const Hero = () => {
                 width={16}
                 height={16}
               />
-              <Link href='https://www.google.it/maps/place/20099+Sesto+San+Giovanni+MI/@45.5369608,9.2427489,14z/'>
+              <Link href='https://www.google.it/maps/place/20099+Sesto+San+Giovanni+MI/@45.5369608,9.2427489,14z/' legacyBehavior>
                 45&deg;32&apos;25&quot;08 N, 09&deg;14&apos;34&quot;08 E
               </Link>
             </div>

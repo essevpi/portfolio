@@ -1,4 +1,4 @@
-@import './variables.scss'; 
+@import './variables.scss';
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,8 @@
   margin: 0;
 }
 
-body, html {
+body,
+html {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   letter-spacing: 0px;
@@ -32,7 +33,10 @@ h3 {
   line-height: 1.2;
 }
 
-p, label, a, button {
+p,
+label,
+a,
+button {
   font-size: clamp($p-min-size, $p-val-size, $p-max-size);
 }
 
@@ -55,12 +59,12 @@ button {
 
 //Fix autofill color change
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    box-shadow: 0 0 0 30px $section-background-color inset !important;
-    -webkit-box-shadow: 0 0 0 30px $section-background-color inset !important;
-    -webkit-text-fill-color: $primary-text-color !important;
+  box-shadow: 0 0 0 30px $section-background-color inset !important;
+  -webkit-box-shadow: 0 0 0 30px $section-background-color inset !important;
+  -webkit-text-fill-color: $primary-text-color !important;
 }
 
 //Utils classes
@@ -78,10 +82,6 @@ input:-webkit-autofill:active {
   @media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: $mobile-height) {
     min-height: calc(100vh + 4rem);
   }
-
-  /* @media screen and (max-height: $mobile-height) {
-    min-height: 150vh;
-  } */
 }
 
 .app__section {

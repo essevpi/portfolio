@@ -49,7 +49,11 @@ const Navbar = () => {
   //Handler for showing/hiding navbar on scroll
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
-      if (window.pageYOffset > lastScrollY && window.pageYOffset > 100 && isDrawerOpen === false) {
+      if (
+        window.pageYOffset > lastScrollY &&
+        window.pageYOffset > 100 &&
+        isDrawerOpen === false
+      ) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
@@ -69,9 +73,13 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`${styles['navbar__container']} ${isHidden && styles['navbar__hidden']}`}>
+    <nav
+      className={`${styles['navbar__container']} ${
+        isHidden && styles['navbar__hidden']
+      }`}
+    >
       <div className={styles['navbar__wrapper']}>
-        <Link href="/">
+        <Link href='/' legacyBehavior>
           <a className={styles['navbar__logo']}>essevPi</a>
         </Link>
         <ul className={styles['navbar__links']}>
@@ -83,24 +91,26 @@ const Navbar = () => {
         </ul>
 
         <div className={styles['navbar__menu']}>
-          <IoMdMenu onClick={() => setIsDrawerOpen(prev => !prev)} />
+          <IoMdMenu onClick={() => setIsDrawerOpen((prev) => !prev)} />
           <AnimatePresence>
             {isDrawerOpen && (
               <motion.div
                 className={styles['navbar__menu-drawer']}
                 variants={drawerVariants}
-                initial="closed"
-                animate="open"
-                exit="close"
+                initial='closed'
+                animate='open'
+                exit='close'
               >
                 <div className={styles['navbar__close-btn-wrapper']}>
-                  <IoMdClose onClick={() => setIsDrawerOpen(prev => !prev)} />
+                  <IoMdClose onClick={() => setIsDrawerOpen((prev) => !prev)} />
                 </div>
                 <ul className={styles['navbar__links']}>
                   {navItems.map((item) => (
                     <li key={`link-${item.path}`}>
-                      <Link href={`#${item.path}`}>
-                        <a onClick={() => setIsDrawerOpen(false) }>{item.name}</a>
+                      <Link href={`#${item.path}`} legacyBehavior>
+                        <a onClick={() => setIsDrawerOpen(false)}>
+                          {item.name}
+                        </a>
                       </Link>
                     </li>
                   ))}

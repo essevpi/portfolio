@@ -29,12 +29,18 @@ const socialsData = [
   },
 ];
 
-const Socials = ({ wrapperClassName, itemClassName, headingClassName, iconSize, headings }) => {
+const Socials = ({
+  wrapperClassName,
+  itemClassName,
+  headingClassName,
+  iconSize,
+  headings,
+}) => {
   return (
     <div className={wrapperClassName}>
       {socialsData.map((social, i) => (
         <div className={itemClassName} key={i}>
-          <Link href={social.url} passHref>
+          <Link href={social.url} passHref legacyBehavior>
             <a>
               <Image
                 src={social.iconPath}
@@ -47,7 +53,7 @@ const Socials = ({ wrapperClassName, itemClassName, headingClassName, iconSize, 
           {headings && (
             <div className={headingClassName}>
               <h3>{social.name}</h3>
-              <Link href={social.url} passHref>
+              <Link href={social.url} passHref legacyBehavior>
                 <a>{social.content}</a>
               </Link>
             </div>

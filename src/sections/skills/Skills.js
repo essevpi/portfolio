@@ -4,43 +4,37 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SkillList from '../../components/skill-list/SkillList';
 import { knownSkills, plannedSkills } from './skills_data';
 
+//Known skills animation variants
+const knownSkillsVariants = {
+  offscreen: {
+    x: '-100%',
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'easeOut',
+      bounce: 0.5,
+      duration: 0.75,
+    },
+  },
+};
+
+//Planned skills animation variants
+const plannedSkillsVariants = {
+  ...knownSkillsVariants,
+  offscreen: {
+    ...knownSkillsVariants.offscreen,
+    x: '100%',
+  },
+  onscreen: {
+    x: 0,
+    ...knownSkillsVariants.onscreen,
+  },
+};
+
 const Skills = () => {
-  const [isMobile, setIsMobile] = useState();
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-  }, []);
-
-  //Known skills animation variants
-  const knownSkillsVariants = {
-    offscreen: {
-      x: '-100%',
-      opacity: 0,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: 'easeOut',
-        bounce: 0.5,
-        duration: 0.75,
-      },
-    },
-  };
-
-  //Planned skills animation variants
-  const plannedSkillsVariants = {
-    ...knownSkillsVariants,
-    offscreen: {
-      ...knownSkillsVariants.offscreen,
-      x: '100%'
-    },
-    onscreen: {
-      x: 0,
-      ...knownSkillsVariants.onscreen
-    }
-  };
-
   return (
     <div
       className={`${styles['section__container']} app__flex app__fullscreen`}
