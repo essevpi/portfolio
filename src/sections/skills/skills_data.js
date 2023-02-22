@@ -1,3 +1,5 @@
+import { HTML5_ICON } from './skills_icons.js';
+
 export const knownSkills = {
   heading: {
     title: 'Skills & Tools',
@@ -7,7 +9,7 @@ export const knownSkills = {
   items: [
     {
       name: 'HTML 5',
-      iconPath: '/icons/html5.svg',
+      iconPath: HTML5_ICON,
       progress: 80,
     },
     {
