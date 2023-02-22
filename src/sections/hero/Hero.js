@@ -65,7 +65,7 @@ const Hero = () => {
             </h1>
             <TypewriterComponent options={typewriterOptions} />
             <div className={styles['hero__actions-wrapper']}>
-              <Link href='#contact' passHref legacyBehavior>
+              <Link href='#contact' scroll={false} passHref legacyBehavior>
                 <button
                   className={`${styles['hero__action-btn']} ${styles['hero__cta-btn']}`}
                 >

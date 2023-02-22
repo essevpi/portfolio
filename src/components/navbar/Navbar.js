@@ -85,7 +85,7 @@ const Navbar = () => {
         <ul className={styles['navbar__links']}>
           {navItems.map((item) => (
             <li key={`link-${item.path}`}>
-              <Link href={`/#${item.path}`}>{item.name}</Link>
+              <Link href={`/#${item.path}`} scroll={false}>{item.name}</Link>
             </li>
           ))}
         </ul>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <ul className={styles['navbar__links']}>
                   {navItems.map((item) => (
                     <li key={`link-${item.path}`}>
-                      <Link href={`#${item.path}`} legacyBehavior>
+                      <Link href={`#${item.path}`} scroll={false} legacyBehavior>
                         <a onClick={() => setIsDrawerOpen(false)}>
                           {item.name}
                         </a>
