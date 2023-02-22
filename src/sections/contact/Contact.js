@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Contact.module.scss';
 import Image from 'next/image';
 import Socials from '../../components/socials/Socials';
-import ContactForm from '../../components/contact-form/ContactForm';
+import TopDivider from '../../../public/images/contact_divider-top.svg';
 
 const Contact = () => {
   return (
@@ -12,9 +12,9 @@ const Contact = () => {
     >
       <div className={styles['section__divider-top']}>
         <Image
-          src="/images/projects_divider-top.svg"
+          src={TopDivider}
           alt="projects-divider-top"
-          layout="fill"
+          fill
         />
       </div>
 
@@ -32,11 +32,6 @@ const Contact = () => {
             headings
           />
         </div>
-        {/* <div className={styles['contacts-card__item-wrapper']}>
-          <div className={styles['card__item-icon-wrapper']}>
-            <Image src='' />
-          </div>
-        </div> */}
       </div>
     </div>
   );

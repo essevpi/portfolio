@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Socials from '../../components/socials/Socials';
 import TypewriterComponent from 'typewriter-effect';
+import TopDivider from '../../../public/images/hero_divider-top.svg';
+import BottomDivider from '../../../public/images/hero_divider-bottom.svg';
+import PinPointIcon from '../../../public/icons/map_pinpoint.svg';
 
 import styles from './Hero.module.scss';
-import Socials from '../../components/socials/Socials';
 
 const heroVariants = {
   offscreen: {
@@ -40,9 +43,9 @@ const Hero = () => {
       {/* top divider */}
       <div className={styles['section__divider-top']}>
         <Image
-          src='/images/hero_divider-top.svg'
+          src={TopDivider}
           alt='hero-divider-top'
-          layout='fill'
+          fill
         />
       </div>
 
@@ -69,8 +72,7 @@ const Hero = () => {
                   Contact
                 </button>
               </Link>
-              <Link href='/files/CV_v1.pdf' passHref legacyBehavior>
-                {/* <a href='/files/CV_v1.pdf' download> */}
+              <Link href='/files/CV_wPic.pdf' passHref legacyBehavior>
                 <button
                   className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}
                 >
@@ -83,7 +85,7 @@ const Hero = () => {
           <div className={styles['hero__container-info-wrapper']}>
             <div className={styles['hero__position-wrapper']}>
               <Image
-                src='/icons/map_pinpoint.svg'
+                src={PinPointIcon}
                 alt='map-pinpoint'
                 width={16}
                 height={16}
@@ -104,9 +106,9 @@ const Hero = () => {
       {/* bottom divider */}
       <div className={styles['section__divider-bottom']}>
         <Image
-          src='/images/hero_divider-bottom.svg'
+          src={BottomDivider}
           alt='hero-divider-bottom'
-          layout='fill'
+          fill
         />
       </div>
     </div>
