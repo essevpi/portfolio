@@ -1,33 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const socialsData = [
-  {
-    name: 'E-Mail',
-    content: 'essevpi@gmail.com',
-    iconPath: '/icons/email_white.svg',
-    url: 'mailto:essevpi@gmail.com',
-  },
-  {
-    name: 'Telegram',
-    content: '@kappahz',
-    iconPath: '/icons/telegram_white.svg',
-    url: 'https://t.me/kappahz',
-  },
-  {
-    name: 'GitHub',
-    content: 'essevpi',
-    iconPath: '/icons/github_white.svg',
-    url: 'https://github.com/essevpi',
-  },
-  {
-    name: 'LinkedIn',
-    content: 'essevpi',
-    iconPath: '/icons/linkedin_white.svg',
-    url: 'https://linkedin.com/in/essevpi',
-  },
-];
+import SocialsData from './socials_data';
 
 const Socials = ({
   wrapperClassName,
@@ -38,7 +12,7 @@ const Socials = ({
 }) => {
   return (
     <div className={wrapperClassName}>
-      {socialsData.map((social, i) => (
+      {SocialsData.map((social, i) => (
         <div className={itemClassName} key={i}>
           <Link href={social.url} passHref legacyBehavior>
             <a>

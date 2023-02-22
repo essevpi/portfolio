@@ -1,4 +1,4 @@
-import { HTML5_ICON } from './skills_icons.js';
+import Icons from './skills_icons.js';
 
 export const knownSkills = {
   heading: {
@@ -9,82 +9,82 @@ export const knownSkills = {
   items: [
     {
       name: 'HTML 5',
-      iconPath: HTML5_ICON,
+      iconPath: Icons.HTML5_ICON,
       progress: 80,
     },
     {
       name: 'CSS 3',
-      iconPath: '/icons/css3.svg',
+      iconPath: Icons.CSS3_ICON,
       progress: 80,
     },
     {
       name: 'JavaScript',
-      iconPath: '/icons/javascript.svg',
+      iconPath: Icons.JAVASCRIPT_ICON,
       progress: 90,
     },
     {
       name: 'React',
-      iconPath: '/icons/react.svg',
+      iconPath: Icons.REACT_ICON,
       progress: 80,
     },
     {
       name: 'SASS',
-      iconPath: '/icons/sass.svg',
+      iconPath: Icons.SASS_ICON,
       progress: 60,
     },
     {
       name: 'Redux',
-      iconPath: '/icons/redux.svg',
+      iconPath: Icons.REDUX_ICON,
       progress: 55,
     },
     {
       name: 'NodeJS',
-      iconPath: '/icons/nodejs.svg',
+      iconPath: Icons.NODEJS_ICON,
       progress: 35,
     },
     {
       name: 'Express',
-      iconPath: '/icons/express.svg',
+      iconPath: Icons.EXPRESS_ICON,
       progress: 35,
     },
     {
       name: 'MongoDB',
-      iconPath: '/icons/mongodb.svg',
+      iconPath: Icons.MONGODB_ICON,
       progress: 30,
     },
     {
       name: 'GraphQL',
-      iconPath: '/icons/graphql.svg',
+      iconPath: Icons.GRAPHQL_ICON,
       progress: 40,
     },
     {
       name: 'Jest',
-      iconPath: '/icons/jest.svg',
+      iconPath: Icons.JEST_ICON,
       progress: 55,
     },
     {
       name: 'NPM',
-      iconPath: '/icons/npm.svg',
+      iconPath: Icons.NPM_ICON,
       progress: 50,
     },
     {
       name: 'VS Code',
-      iconPath: '/icons/vscode.svg',
+      iconPath: Icons.VSCODE_ICON,
       progress: 80,
     },
     {
       name: 'NextJS',
-      iconPath: '/icons/nextjs.svg',
+      iconPath: Icons.NEXTJS_ICON,
       progress: 40,
     },
     {
       name: 'GIT',
-      iconPath: '/icons/git.svg',
+      iconPath: Icons.GIT_ICON,
       progress: 65,
     },
     {
       name: 'Webpack',
-      iconPath: '/icons/webpack.svg',
+      iconPath: Icons.WEBPACK_ICON,
       progress: 20,
     },
   ],
@@ -99,22 +99,22 @@ export const plannedSkills = {
   items: [
     {
       name: 'TypeScript',
-      iconPath: '/icons/typescript.svg',
+      iconPath: Icons.TYPESCRIPT_ICON,
       progress: 0,
     },
     {
       name: 'React Native',
-      iconPath: '/icons/react.svg',
+      iconPath: Icons.REACT_ICON,
       progress: 0,
     },
     {
       name: 'Tailwind',
-      iconPath: '/icons/tailwind.svg',
+      iconPath: Icons.TAILWIND_ICON,
       progress: 0,
     },
     {
       name: 'CI/CD',
-      iconPath: '/icons/cicd.svg',
+      iconPath: Icons.CICD_ICON,
       progress: 0,
     },
   ],
