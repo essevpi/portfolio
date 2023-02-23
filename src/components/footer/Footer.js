@@ -22,7 +22,8 @@ const Footer = () => {
     <div className={`${styles['footer__container']} app__flex`}>
       <footer className={`${styles['footer__wrapper']} app__section`}>
         <div className={styles['footer__heading']}>
-          <p>Made with 💜 by me myself and I</p>
+          <p>Made with 💜 by me</p>
+          <span>&#169; Simone Pili</span>
         </div>
         <Socials
           wrapperClassName={styles['footer__socials-wrapper']}

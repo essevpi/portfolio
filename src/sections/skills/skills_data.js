@@ -92,7 +92,7 @@ export const knownSkills = {
 
 export const plannedSkills = {
   heading: {
-    title: 'Other things I plan to learn',
+    title: 'Technologies I plan to learn',
     description:
       'Here are some of the technologies I plan to learn or I\'m already working with',
   },

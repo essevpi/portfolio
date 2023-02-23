@@ -27,7 +27,7 @@ const heroVariants = {
 };
 
 const typewriterOptions = {
-  strings: ['Front-End Developer', 'Technology enthusiast', 'Some other thing'],
+  strings: ['Front-End Developer', 'Technology Enthusiast', 'Detail Oriented'],
   autoStart: true,
   loop: true,
   wrapperClassName: `${styles.typewriter__wrapper}`,
@@ -72,7 +72,7 @@ const Hero = () => {
                   Contact
                 </button>
               </Link>
-              <Link href='/files/CV_wPic.pdf' passHref legacyBehavior>
+              <Link href='/files/CV-Simone-Pili.pdf' passHref legacyBehavior>
                 <button
                   className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}
                 >

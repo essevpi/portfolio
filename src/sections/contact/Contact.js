@@ -22,7 +22,7 @@ const Contact = () => {
         <div className={styles['contact-container']}>
           <div className={styles['contact__heading-wrapper']}>
             <h1>Let&apos;s get in touch!</h1>
-            <p>Feel free to contact me at any of the following channels:</p>
+            <p>Feel free to contact me at any of the following:</p>
           </div>
           <Socials
             wrapperClassName={styles['contact__socials-wrapper']}

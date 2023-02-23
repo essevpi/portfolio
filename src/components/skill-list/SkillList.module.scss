@@ -43,18 +43,15 @@
       @media screen and (min-width: $xl-desktop-breakpoint) {
         flex: 0 0 12.5%;
       }
-      //Mobile screens: 3 items per row
+      /* Mobile screens: 3 items per row */
       @media screen and (max-width: $mobile-breakpoint) {
         flex: 0 0 33%;
       }
-  
+
+      /* Small Mobile screens: 2 items per row */
       @media screen and (max-width: $xs-mobile-breakpoint) {
         flex: 0 0 50%;
       }
-    }
-  
-    @media screen and (max-width: 768px) {
-      /* flex-direction: column; */
     }
   }
 }

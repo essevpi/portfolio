@@ -19,22 +19,7 @@
       .hero__container-heading-wrapper {
         display: flex;
         flex-direction: column;
-        
-        /* .hero__container-heading-pic {
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          background: white;
 
-          @media screen and (max-width: $desktop-breakpoint) {
-            margin-bottom: 1rem;
-          }
-
-          @media screen and (max-width: $mobile-breakpoint),
-          (max-height: 768px) {
-            display: none;
-          }
-        } */
         .hero__container-heading-title {
           .hero__highlighted {
             color: $primary-color;
@@ -65,7 +50,6 @@
           color: $primary-text-color;
           font-weight: bold;
           text-transform: uppercase;
-                    
         }
 
         .typewriter__cursor {
@@ -90,10 +74,6 @@
           display: flex;
           margin-top: 2rem;
           gap: 10px;
-
-          /* & > * {
-            flex: 1;
-          } */
 
           .hero__action-btn {
             display: flex;
@@ -165,6 +145,7 @@
 
           a {
             font-size: 0.8rem;
+            margin-left: 0.5rem;
           }
     
           a:hover {
@@ -198,7 +179,7 @@
       }
     }  
   }
-  //Section dividers
+  
   .section__divider-top {
     position: absolute;
     top: 0;
