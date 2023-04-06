@@ -1,4 +1,4 @@
-import WeatherioPreview from '../../../public/images/weatherio_preview.png'
+import WeatherioPreview from '../../../public/images/weatherio_preview.png';
 
 const projectsData = [
   {
