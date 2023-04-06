@@ -17,7 +17,7 @@ const SkillCard = ({ name, iconPath, progress, iconSize }) => {
     <motion.div
       whileHover={{
         scale: 1.25,
-        transition: { duration: 0.25, ease: 'easeInOut' },
+        transition: { duration: 0.25 },
       }}
       className={styles['skills__container-item']}
     >
@@ -36,7 +36,7 @@ const SkillCard = ({ name, iconPath, progress, iconSize }) => {
   );
 };
 
-const SkillList = ({ cards, title, description, iconSize }) => {
+const SkillsList = ({ cards, title, description, iconSize }) => {
   return (
     <div className={styles['skills__container']}>
       <div className={styles['skills__container-header']}>
@@ -59,4 +59,4 @@ const SkillList = ({ cards, title, description, iconSize }) => {
   );
 };
 
-export default SkillList;
+export default SkillsList;

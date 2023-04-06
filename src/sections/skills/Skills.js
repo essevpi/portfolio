@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Skills.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
-import SkillList from '../../components/skill-list/SkillList';
+import SkillsList from '../../components/skillsList/SkillsList';
 import { knownSkills, plannedSkills } from './skills_data';
 
 //Known skills animation variants
@@ -48,7 +48,7 @@ const Skills = () => {
           whileInView='onscreen'
           viewport={{ once: false }}
         >
-          <SkillList
+          <SkillsList
             cards={knownSkills.items}
             title={knownSkills.heading.title}
             description={knownSkills.heading.description}
@@ -62,7 +62,7 @@ const Skills = () => {
           whileInView='onscreen'
           viewport={{ once: false }}
         >
-          <SkillList
+          <SkillsList
             cards={plannedSkills.items}
             title={plannedSkills.heading.title}
             description={plannedSkills.heading.description}

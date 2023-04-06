@@ -1,0 +1,54 @@
+@import '../../../styles/variables.scss';
+
+.project-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+
+  .project-card__container {
+    background: $section-background-color;
+    display: flex;        
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% / $l-projects-per-row) - 10px + (10px / $l-projects-per-row));
+    //border: 1px solid $dark-divider-color;
+    border-radius: 8px;
+
+    @media screen and (max-width: $desktop-breakpoint) {
+      width: calc((100% / $m-projects-per-row) - 10px + (10px / $m-projects-per-row));
+    }
+
+    @media screen and (max-width: $desktop-breakpoint) {
+      width: calc((100% / $s-projects-per-row) - 10px + (10px / $s-projects-per-row));
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: calc((100% / $xs-projects-per-row) - 10px + (10px / $xs-projects-per-row));
+    }
+  
+    .project-card-image__container {
+      position: relative;
+      display: flex; 
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        //border: 1px solid $header-divider-color;
+      }
+    }
+
+    .project-card__body {
+      padding: 12px;
+
+      .project-card__heading {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+

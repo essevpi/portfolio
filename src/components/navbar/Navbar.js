@@ -16,8 +16,8 @@ const navItems = [
     path: 'skills',
   },
   {
-    name: 'Contact',
-    path: 'contact',
+    name: 'Projects',
+    path: 'projects',
   },
 ];
 

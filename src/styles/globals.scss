@@ -33,11 +33,17 @@ h3 {
   line-height: 1.2;
 }
 
+h4 {
+  font-size: clamp($h4-min-size, $h4-val-size, $h4-max-size);
+  line-height: 1.2;
+}
+
 p,
 label,
 a,
 button {
   font-size: clamp($p-min-size, $p-val-size, $p-max-size);
+  line-height: 1.6;
 }
 
 .Typewriter {
@@ -55,16 +61,6 @@ a {
 
 button {
   cursor: pointer;
-}
-
-//Fix autofill color change
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  box-shadow: 0 0 0 30px $section-background-color inset !important;
-  -webkit-box-shadow: 0 0 0 30px $section-background-color inset !important;
-  -webkit-text-fill-color: $primary-text-color !important;
 }
 
 //Utils classes
@@ -94,4 +90,8 @@ input:-webkit-autofill:active {
   @media screen and (max-width: $medium-breakpoint) {
     width: $mobile-section-width;
   }
+}
+
+.secondary-text {
+  color: $secondary-text-color;
 }

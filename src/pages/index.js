@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Footer from '../components/footer/Footer';
 import Navbar from '../components/navbar/Navbar';
 import Hero from '../sections/hero/Hero';
-import Contact from '../sections/contact/Contact';
+import About from '../sections/about/About';
 import Skills from '../sections/skills/Skills';
+import Projects from '../sections/projects/Projects';
 
 import styles from './App.module.scss';
-import About from '../sections/about/About';
+
 
 const Home = () => {
   return (
@@ -29,7 +29,7 @@ const Home = () => {
       <Hero />
       <About />
       <Skills />
-      <Contact />
+      <Projects />
       <Footer />
     </div>
   );
