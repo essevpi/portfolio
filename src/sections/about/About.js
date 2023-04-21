@@ -2,7 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import AboutData from './about_data';
-import AboutAsset from '../../../public/images/about_asset.svg';import BottomDivider from '../../../public/images/hero_divider-bottom.svg';
+import AboutAsset from '../../../public/images/about_asset.svg';
+import BottomDivider from '../../../public/images/hero_divider-bottom.svg';
 
 import styles from './About.module.scss';
 

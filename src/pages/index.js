@@ -8,7 +8,6 @@ import Projects from '../sections/projects/Projects';
 
 import styles from './App.module.scss';
 
-
 const Home = () => {
   return (
     <div className={styles.app}>

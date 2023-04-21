@@ -20,6 +20,7 @@
   }
 
   .projects-container {
+    margin: 175px 0;
     padding: 1rem;
     border-radius: 8px;
     background: $glass-background-color;
@@ -35,10 +36,10 @@
       padding: 3rem 0;
       display: flex;
       align-items: center;
-      justify-content: center;   
+      justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-      
+
       @media screen and (max-width: $mobile-breakpoint) {
         flex-direction: column;
         align-items: flex-start;
@@ -60,7 +61,7 @@
           flex-direction: row;
         }
 
-        & > a {
+        &>a {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -86,7 +87,7 @@
             margin-left: 16px;
             margin-top: 0;
           }
-          
+
           h3 {
             color: $primary-color;
             text-transform: uppercase;

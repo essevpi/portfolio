@@ -42,11 +42,7 @@ const Hero = () => {
     >
       {/* top divider */}
       <div className={styles['section__divider-top']}>
-        <Image
-          src={TopDivider}
-          alt='hero-divider-top'
-          fill
-        />
+        <Image src={TopDivider} alt='hero-divider-top' fill />
       </div>
 
       <motion.div
@@ -60,23 +56,28 @@ const Hero = () => {
           <div className={styles['hero__container-heading-wrapper']}>
             <h1 className={styles['hero__container-heading-title']}>
               Hello there, I&apos;m{' '}
-              <span className={styles['hero__highlighted']}>Simone</span>{' '}
+              <span className='gradient-text'>Simone</span>{' '}
               <span className={styles['wave__emoji']}>✋🏽</span>
             </h1>
             <TypewriterComponent options={typewriterOptions} />
             <div className={styles['hero__actions-wrapper']}>
-              <Link href='mailto:essevpi@gmail.com' scroll={false} passHref legacyBehavior>
+              <Link href='#projects' scroll={false} legacyBehavior>
+                <button
+                  className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}
+                >
+                  Projects
+                </button>
+              </Link>
+              <Link
+                href='mailto:essevpi@gmail.com'
+                scroll={false}
+                passHref
+                legacyBehavior
+              >
                 <button
                   className={`${styles['hero__action-btn']} ${styles['hero__cta-btn']}`}
                 >
                   Contact
-                </button>
-              </Link>
-              <Link href='/files/CV-Simone-Pili.pdf' passHref legacyBehavior>
-                <button
-                  className={`${styles['hero__action-btn']} ${styles['hero__secondary-btn']}`}
-                >
-                  View CV
                 </button>
               </Link>
             </div>
@@ -90,7 +91,10 @@ const Hero = () => {
                 width={16}
                 height={16}
               />
-              <Link href='https://www.google.it/maps/place/20099+Sesto+San+Giovanni+MI/@45.5369608,9.2427489,14z/' legacyBehavior>
+              <Link
+                href='https://www.google.it/maps/place/20099+Sesto+San+Giovanni+MI/@45.5369608,9.2427489,14z/'
+                legacyBehavior
+              >
                 45&deg;32&apos;25&quot;08 N, 09&deg;14&apos;34&quot;08 E
               </Link>
             </div>
@@ -105,11 +109,7 @@ const Hero = () => {
 
       {/* bottom divider */}
       <div className={styles['section__divider-bottom']}>
-        <Image
-          src={BottomDivider}
-          alt='hero-divider-bottom'
-          fill
-        />
+        <Image src={BottomDivider} alt='hero-divider-bottom' fill />
       </div>
     </div>
   );

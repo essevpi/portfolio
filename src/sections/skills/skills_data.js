@@ -4,7 +4,7 @@ export const knownSkills = {
   heading: {
     title: 'Skills & Tools',
     description:
-      'Here\'s a list of the main technologies and tools I worked with so far.',
+      'A list of the main technologies and tools I worked with so far.',
   },
   items: [
     {
@@ -33,9 +33,24 @@ export const knownSkills = {
       progress: 60,
     },
     {
+      name: 'Tailwind',
+      iconPath: Icons.TAILWIND_ICON,
+      progress: 70,
+    },
+    {
       name: 'Redux',
       iconPath: Icons.REDUX_ICON,
-      progress: 55,
+      progress: 65,
+    },
+    {
+      name: 'NextJS',
+      iconPath: Icons.NEXTJS_ICON,
+      progress: 40,
+    },
+    {
+      name: 'GraphQL',
+      iconPath: Icons.GRAPHQL_ICON,
+      progress: 40,
     },
     {
       name: 'NodeJS',
@@ -53,29 +68,14 @@ export const knownSkills = {
       progress: 30,
     },
     {
-      name: 'GraphQL',
-      iconPath: Icons.GRAPHQL_ICON,
-      progress: 40,
-    },
-    {
       name: 'Jest',
       iconPath: Icons.JEST_ICON,
       progress: 55,
     },
     {
-      name: 'NPM',
-      iconPath: Icons.NPM_ICON,
-      progress: 50,
-    },
-    {
       name: 'VS Code',
       iconPath: Icons.VSCODE_ICON,
       progress: 80,
-    },
-    {
-      name: 'NextJS',
-      iconPath: Icons.NEXTJS_ICON,
-      progress: 40,
     },
     {
       name: 'GIT',
@@ -93,8 +93,7 @@ export const knownSkills = {
 export const plannedSkills = {
   heading: {
     title: 'Technologies I plan to learn',
-    description:
-      'Here are some of the technologies I plan to learn or I\'m already working with',
+    description: 'Here are some of the technologies I plan to learn.',
   },
   items: [
     {
@@ -105,11 +104,6 @@ export const plannedSkills = {
     {
       name: 'React Native',
       iconPath: Icons.REACT_ICON,
-      progress: 0,
-    },
-    {
-      name: 'Tailwind',
-      iconPath: Icons.TAILWIND_ICON,
       progress: 0,
     },
     {

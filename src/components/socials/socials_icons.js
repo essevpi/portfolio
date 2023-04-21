@@ -7,7 +7,7 @@ const Icons = {
   EMAIL_ICON,
   TELEGRAM_ICON,
   GITHUB_ICON,
-  LINKEDIN_ICON
+  LINKEDIN_ICON,
 };
 
 export default Icons;

@@ -3,52 +3,88 @@
 .project-list__container {
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
   margin-top: 1rem;
 
   .project-card__container {
     background: $section-background-color;
-    display: flex;        
+    display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
-    width: calc((100% / $l-projects-per-row) - 10px + (10px / $l-projects-per-row));
-    //border: 1px solid $dark-divider-color;
+    flex: 0 1 calc(33% - 0.5rem);
     border-radius: 8px;
+    border: 2px solid transparent;
 
-    @media screen and (max-width: $desktop-breakpoint) {
-      width: calc((100% / $m-projects-per-row) - 10px + (10px / $m-projects-per-row));
+    &:hover {
+      border-color: $hover-color;
+      transition: colors 0.3s;
     }
 
     @media screen and (max-width: $desktop-breakpoint) {
-      width: calc((100% / $s-projects-per-row) - 10px + (10px / $s-projects-per-row));
+      flex: 1 0 calc(50% - 0.5rem);
     }
 
     @media screen and (max-width: $mobile-breakpoint) {
-      width: calc((100% / $xs-projects-per-row) - 10px + (10px / $xs-projects-per-row));
+      flex: 0 1 100%;
     }
-  
-    .project-card-image__container {
-      position: relative;
-      display: flex; 
-  
-      img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 8px 8px 0 0;
-        //border: 1px solid $header-divider-color;
+
+    .project-card__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .project-card-image__container {
+        position: relative;
+        display: flex;
+
+        img {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 8px 8px 0 0;
+        }
       }
-    }
 
-    .project-card__body {
-      padding: 12px;
+      .project-card__body {
+        flex: 1;
+        padding: 1rem;
 
-      .project-card__heading {
-        margin-bottom: 12px;
+        .project-card__heading {
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .project-card__tags {
+        margin-top: 1rem;
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .project-card__tag {
+          font-size: 0.8rem;
+          color: $secondary-text-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $background-color;
+          border-radius: 18px;
+          padding: 0 0.5rem;
+          border: 1px solid $header-divider-color;
+
+          .project-card__tag-bullet {
+            width: 7px;
+            height: 7px;
+            margin-right: 0.25rem;
+            border-radius: 100%;
+            background: $header-divider-color;
+          }
+        }
       }
     }
   }
 }
-

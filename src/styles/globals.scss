@@ -42,6 +42,7 @@ p,
 label,
 a,
 button {
+  font-family: inherit;
   font-size: clamp($p-min-size, $p-val-size, $p-max-size);
   line-height: 1.6;
 }
@@ -94,4 +95,13 @@ button {
 
 .secondary-text {
   color: $secondary-text-color;
+}
+
+.gradient-text {
+  background: rgb(38, 19, 110);
+  background: $theme-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }

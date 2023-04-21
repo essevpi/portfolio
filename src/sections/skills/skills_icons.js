@@ -9,7 +9,6 @@ import EXPRESS_ICON from '../../../public/icons/express.svg';
 import MONGODB_ICON from '../../../public/icons/mongodb.svg';
 import GRAPHQL_ICON from '../../../public/icons/graphql.svg';
 import JEST_ICON from '../../../public/icons/jest.svg';
-import NPM_ICON from '../../../public/icons/npm.svg';
 import VSCODE_ICON from '../../../public/icons/vscode.svg';
 import NEXTJS_ICON from '../../../public/icons/nextjs.svg';
 import GIT_ICON from '../../../public/icons/git.svg';
@@ -30,14 +29,13 @@ const Icons = {
   MONGODB_ICON,
   GRAPHQL_ICON,
   JEST_ICON,
-  NPM_ICON,
   VSCODE_ICON,
   NEXTJS_ICON,
   GIT_ICON,
   WEBPACK_ICON,
   TYPESCRIPT_ICON,
   TAILWIND_ICON,
-  CICD_ICON
+  CICD_ICON,
 };
 
 export default Icons;

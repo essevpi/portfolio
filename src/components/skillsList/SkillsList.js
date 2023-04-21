@@ -5,12 +5,9 @@ import { motion } from 'framer-motion';
 
 const SkillCard = ({ name, iconPath, progress, iconSize }) => {
   const getProgressColor = (percentage) => {
-    if (percentage > 0 && percentage < 35)
-      return '#ea5545';
-    else if (percentage >= 35 && percentage < 65)
-      return '#ede15b';
-    else if (percentage >= 65)
-      return '#87bc45';
+    if (percentage > 0 && percentage < 35) return '#ea5545';
+    else if (percentage >= 35 && percentage < 65) return '#ede15b';
+    else if (percentage >= 65) return '#87bc45';
   };
 
   return (
@@ -28,7 +25,10 @@ const SkillCard = ({ name, iconPath, progress, iconSize }) => {
         <div className={styles['skills__item-progress-wrapper']}>
           <div
             className={styles['skills__item-progress']}
-            style={{ width: `${progress}%`, background: `${getProgressColor(progress)}` }}
+            style={{
+              width: `${progress}%`,
+              background: `${getProgressColor(progress)}`,
+            }}
           />
         </div>
       )}
